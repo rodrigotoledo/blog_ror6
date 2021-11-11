@@ -1,0 +1,11 @@
+<div class="jumbotron">
+  <h3>Post form</h3>
+  <%= bootstrap_form_for(post) do |form| %>
+    <%= form.text_field :title %>
+    <%= form.rich_text_area :content %>
+
+    <div class="actions">
+      <%= form.submit class: 'btn btn-sm btn-primary' %>
+    </div>
+  <% end %>
+</div>

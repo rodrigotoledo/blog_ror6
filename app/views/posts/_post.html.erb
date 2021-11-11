@@ -1,0 +1,16 @@
+<div class="card mt-3">
+  <div class="card-body">
+    <h5 class="card-title border-bottom"><%=post.title%></h5>
+    <%=post.content%>
+    <div class="btn-group mt-2" role="group" aria-label="Actions">
+      <%= link_to '#', class: 'btn btn-sm btn-success' do %>
+        Likes <span class="badge badge-light"><%= post.likes_view.to_i %></span>
+      <% end %>
+      <%= link_to '#', class: 'btn btn-sm btn-info mr-1' do %>
+        Dislikes <span class="badge badge-light"><%= post.dislikes_view.to_i %></span>
+      <% end %>
+      <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-sm btn-primary' %>
+      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
+    </div>
+  </div>
+</div>
